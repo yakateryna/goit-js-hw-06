@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// Отримуємо посилання на елемент <ul> за його class
+const ul = document.querySelector(".gallery");
+// Створюємо рядок з HTML-розміткою для кожного об'єкта зображення
+const galleryItemsHTML = images
+  .map(
+    (image) =>
+      `<li><img src="${image.url}" alt="${image.alt}" class="gallery-image"></li>`
+  )
+  .join("");
+
+// Вставляємо рядок з HTML-розміткою у список <ul> за одну операцію
+ul.insertAdjacentHTML("beforeend", galleryItemsHTML);
