@@ -1,7 +1,7 @@
 const loginForm = document.querySelector('.login-form');
 
   loginForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Забороняємо стандартну поведінку форми (перезавантаження сторінки)
+    event.preventDefault(); 
 
     const emailInput = loginForm.elements.email;
     const passwordInput = loginForm.elements.password;
@@ -16,6 +16,6 @@ const loginForm = document.querySelector('.login-form');
 
       console.log(formData);
 
-      loginForm.reset(); // Очищаємо значення полів форми
+      loginForm.reset(); 
     }
   });
